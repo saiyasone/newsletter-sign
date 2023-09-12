@@ -1,0 +1,67 @@
+<div class="sign-container">
+  <div class="container">
+    <div class="card">
+      <div class="card-body">
+        <div class="card-wrapper">
+          <div class="card-form">
+            <h2>Stay updated!</h2>
+            <p>Join 60,000+ product managers receiving monthly updates on:</p>
+
+            <div class="card-list">
+              <div class="item">
+                <img src="../assets/images/icon-list.svg" alt="" />
+                <span>Product discovery and building what matters</span>
+              </div>
+              <div class="item">
+                <img src="../assets/images/icon-list.svg" alt="" />
+                <span>Product discovery and building what matters</span>
+              </div>
+              <div class="item">
+                <img src="../assets/images/icon-list.svg" alt="" />
+                <span>And much more!</span>
+              </div>
+            </div>
+
+            <form class="form-submit" [formGroup]="form">
+              <div class="form-input">
+                <div class="label-item">
+                  <label for="email">Email address</label>
+                  <ng-container
+                    *ngIf="f['email'].invalid && f['email'].touched"
+                  >
+                    <small>Valid email required</small>
+                  </ng-container>
+                </div>
+                <input
+                  formControlName="email"
+                  type="email"
+                  placeholder="e.g. example@gmail.com"
+                />
+              </div>
+
+              <div class="form-action">
+                <button (click)="onSave()">
+                  Subscribe to monthly newsletter
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="card-image">
+            <div class="card-img">
+              <img
+                class="img-mobile"
+                src="../assets/images/illustration-sign-up-mobile.svg"
+                alt=""
+              />
+              <img
+                class="img-desktop"
+                src="../assets/images/illustration-sign-up-desktop.svg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

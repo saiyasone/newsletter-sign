@@ -1,1 +1,206 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@300&family=Open+Sans&family=Outfit:wght@300;400&family=Overpass:wght@300;500&family=Poppins&family=Roboto:ital,wght@0,300;0,500;1,500&family=Ubuntu:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --tomato-color: #ff6257;
+  --dark-color: #242742;
+  --thin-color: #36384e;
+  --grey-color: #9294a0;
+  --white-color: #ffffff;
+}
+
+body {
+  background-color: var(--dark-color);
+}
+
+button {
+  width: 100%;
+  height: 48px;
+  border: 0;
+  outline: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: var(--dark-color);
+  color: var(--white-color);
+  font-size: 0.9rem;
+}
+button:hover {
+  background-image: linear-gradient(100deg, #ff5476, var(--tomato-color));
+}
+
+input.ng-invalid.ng-touched {
+  border: 1px solid var(--tomato-color);
+  background-color: #ffe8e5;
+}
+input.ng-invalid.ng-touched::placeholder {
+  color: var(--tomato-color);
+}
+
+.sign-container {
+  max-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign-container .container {
+  max-width: 800px;
+}
+@media (max-width: 800px) {
+  .sign-container .container {
+    width: 100%;
+  }
+}
+
+.card {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.card .card-body {
+  padding: 30px 20px;
+}
+
+@media (max-width: 800px) {
+  .card .card-body {
+    padding: 0;
+  }
+}
+
+.card-body .card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+@media (max-width: 800px) {
+  .card-body .card-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .card-body .card-wrapper .card-form {
+    order: 1;
+  }
+  .card-body .card-wrapper .card-image {
+    order: -1;
+  }
+}
+
+.card-wrapper .card-form {
+  padding: 0 20px;
+}
+
+@media (max-width: 800px) {
+  .card-wrapper .card-form {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.card-form h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--dark-color);
+  margin-bottom: 1.5rem;
+}
+.card-form > p {
+  line-height: 1.4;
+  font-size: 1.1rem;
+  color: var(--thin-color);
+}
+.card-form .card-list {
+  padding: 1.5rem 0;
+}
+.card-list .item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+.item img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  margin-right: 0.8rem;
+}
+.item span {
+  font-size: 0.85rem;
+  margin-bottom: 0;
+  color: var(--thin-color);
+}
+
+.card-body .form-submit {
+  max-width: 100%;
+}
+.form-submit .form-input {
+  margin-bottom: 1.2rem;
+}
+.form-input .label-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+.label-item > label {
+  font-size: 0.8rem;
+  color: var(--dark-color);
+}
+.label-item small {
+  color: var(--tomato-color);
+}
+.form-input input {
+  width: 100%;
+  height: 45px;
+  outline: none;
+  border-radius: 8px;
+  border: 1px solid var(--grey-color);
+  padding: 8px 14px;
+  font-size: 16px;
+  color: var(--thin-color);
+}
+.form-input input::placeholder {
+  color: var(--grey-color);
+}
+
+.form-submit .form-action {
+  width: 100%;
+}
+
+.card-wrapper .card-image {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+.card-image .card-img {
+  width: 100%;
+  height: 100%;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+@media (min-width: 800px) {
+  .card-img .img-desktop {
+    display: block;
+  }
+}
+
+@media (max-width: 800px) {
+  .card-wrapper .card-image {
+    height: 100%;
+  }
+  .card-img .img-mobile {
+    display: block;
+  }
+}
